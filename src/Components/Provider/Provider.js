@@ -1,14 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 import { updateProvider } from "../../store/actions";
+import "../GameId/GameId.scss";
 
 const provider = props => {
   return (
     <div>
-      <label htmlFor="provider">PROVIDER:</label>
+      <label>PROVIDER:</label>
       <input
         type="text"
-        id="provider"
+        className="inputfield"
         placeholder="tpevents or adjust-callback"
         onChange={e => {
           props.updateProvider(e.target.value);

@@ -1,0 +1,31 @@
+@import "../variables";
+
+.list-form {
+  @include formCenter;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  .event-list {
+    width: 140px;
+    height: 150px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 8px;
+  }
+}
+
+.name {
+  p {
+    font-size: 14px;
+    color: cornflowerblue;
+  }
+  span {
+    font-size: 14px;
+    color: gray;
+  }
+}

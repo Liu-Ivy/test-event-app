@@ -1,25 +1,30 @@
 import React from "react";
+import "./EventList.scss";
 
 function EventList(props) {
-  console.log("list", props.list);
   return (
-    <div>
+    <div className="list-form">
       {props.list.map(item => {
         const { event_name, state_name, user_id } = item.record;
-        {
-          /* const { createdAt } = item; */
-        }
-        {
-          /* const inOrder = item.sort((a, b) => a.createdAt > b.createdAt); */
-        }
+        const { createdAt } = item;
+
         return (
-          <div>
-            <p>
-              Name:{event_name}
-              {state_name}
+          <div className="event-list">
+            <p className="name">
+              <p>Name:</p>
+              <span>
+                {event_name}
+                {state_name}
+              </span>
             </p>
-            <p>User Id:{user_id}</p>
-            {/* <p>Created at:{inOrder}</p> */}
+            <p className="name">
+              <p>User Id:</p>
+              <span>{user_id}</span>
+            </p>
+            <p className="name">
+              <p>Created at:</p>
+              <span>{createdAt}</span>
+            </p>
           </div>
         );
       })}

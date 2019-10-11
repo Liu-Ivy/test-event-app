@@ -1,14 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 import { updateGameId } from "../../store/actions";
+import "./GameId.scss";
 
 const gameId = props => {
   return (
     <div>
-      <label htmlFor="game-id">GAME ID:</label>
+      <label>GAME ID:</label>
       <input
         type="text"
-        id="game-id"
+        className="inputfield"
         placeholder="warhammer or photofinish"
         onChange={e => {
           props.updateGameId(e.target.value);

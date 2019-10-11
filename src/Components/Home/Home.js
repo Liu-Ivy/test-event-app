@@ -23,16 +23,22 @@ function Home({ gameId, provider, tpdid }) {
 
   const isValid = () => gameId && provider && tpdid;
   return (
-    <div>
+    <>
       <h1 className="title">Test-Event</h1>
-      <GameId></GameId>
-      <Provider></Provider>
-      <TpdId></TpdId>
-      <button disabled={!isValid()} onClick={handleAllSearch}>
-        Submit
-      </button>
+      <div className="form">
+        <GameId></GameId>
+        <Provider></Provider>
+        <TpdId></TpdId>
+        <button
+          className="button"
+          disabled={!isValid()}
+          onClick={handleAllSearch}
+        >
+          Submit
+        </button>
+      </div>
       <EventList list={eventList} />
-    </div>
+    </>
   );
 }
 

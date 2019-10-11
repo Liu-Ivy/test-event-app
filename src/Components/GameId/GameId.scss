@@ -1,0 +1,47 @@
+@import "../variables";
+
+label {
+  font-size: 14px;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+label,
+input {
+  float: left;
+  clear: both;
+}
+
+.inputfield {
+  margin: 15px 0;
+  padding: 15px 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @include transitionCenter;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: cornflowerblue;
+}
+
+input[type="submit"] {
+  padding: 15px 50px;
+  width: auto;
+  background: #1abc9c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  float: right;
+  clear: right;
+  @include transitionCenter;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
